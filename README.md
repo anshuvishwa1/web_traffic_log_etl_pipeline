@@ -4,9 +4,12 @@ This Jupyter Notebook demonstrates an ETL (Extract, Transform, Load) pipeline fo
 
 ## File Structure
 
-- `etl_pipeline.ipynb`: The main notebook that contains the ETL pipeline code.
-- `README.md`: This file includes entire information about notebook working.
-- `fashion_brand_logs.db`: This is the SQLite database file.
+- `etl_pipeline.ipynb` – Jupyter Notebook containing the ETL pipeline implementation.
+- `etl_pipeline.py` – Standalone Python script for executing the ETL pipeline.
+- `fashion_brand_logs.db` – SQLite database file used for storing processed data.
+- `requirements.txt` – List of dependencies required to run the ETL pipeline.
+- `Dockerfile` – Configuration file for containerizing the application using Docker.
+- `README.md` – Documentation explaining the project's functionality, setup, and execution.
 
 ## Database Considerations
 
@@ -23,4 +26,5 @@ This Jupyter Notebook demonstrates an ETL (Extract, Transform, Load) pipeline fo
 - This Python notebook can be orchestrated using tools like Apache Airflow, Azure Data Factory (ADF), or other scheduling frameworks, depending on the cloud environment. 
 
 ## Containerization (Docker)
-- This notebook does not use Docker since it can be executed directly or orchestrated via Apache Airflow, Azure Data Factory, or other workflow automation tools. Docker is typically used when packaging full-fledged Python applications with a structured entry point (main.py), ensuring consistency across deployments.
+- This project includes a Dockerfile to containerize the Python code(`etl_pipeline.py`) for consistent execution across environments. The ETL pipeline (etl_pipeline.py) and dependencies (requirements.txt) are packaged within Docker, allowing for seamless deployment.
+- `etl_pipeline.ipynb` notebook can be executed directly or orchestrated via Apache Airflow, Azure Data Factory, or other workflow automation tools. 
