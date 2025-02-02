@@ -28,3 +28,17 @@ This Jupyter Notebook demonstrates an ETL (Extract, Transform, Load) pipeline fo
 ## Containerization (Docker)
 - This project includes a Dockerfile to containerize the Python code(`etl_pipeline.py`) for consistent execution across environments. The ETL pipeline (etl_pipeline.py) and dependencies (requirements.txt) are packaged within Docker, allowing for seamless deployment.
 - `etl_pipeline.ipynb` notebook can be executed directly or orchestrated via Apache Airflow, Azure Data Factory, or other workflow automation tools. 
+
+## Setup and Execution Instructions
+
+Follow these steps to create and run the application:
+
+1. Navigate to the directory containing the application code.
+2. Build the Docker image:
+    ```sh
+    docker build -t etl_pipeline .
+    ```
+3. Run the container using the following command:
+    ```sh
+    docker run etl_pipeline
+    ```
